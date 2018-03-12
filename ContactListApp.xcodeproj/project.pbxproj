@@ -12,6 +12,13 @@
 		5A675F1020528712003F454F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A675F0E20528712003F454F /* Main.storyboard */; };
 		5A675F1220528712003F454F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A675F1120528712003F454F /* Assets.xcassets */; };
 		5A675F1520528712003F454F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A675F1320528712003F454F /* LaunchScreen.storyboard */; };
+		5A675F1D20528B7E003F454F /* CustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A675F1C20528B7E003F454F /* CustomUIButton.swift */; };
+		5A675F1F20528EDD003F454F /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A675F1E20528EDD003F454F /* ContactListViewController.swift */; };
+		5A7739FA2052984E003B39D8 /* CustomUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7739F92052984E003B39D8 /* CustomUILabel.swift */; };
+		5A7739FD2052BAEF003B39D8 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7739FC2052BAEF003B39D8 /* Singleton.swift */; };
+		5A7739FF2052C05C003B39D8 /* SavedContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7739FE2052C05C003B39D8 /* SavedContactViewController.swift */; };
+		5A773A0120567A87003B39D8 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A773A0020567A87003B39D8 /* CustomTableViewController.swift */; };
+		5A773A0320568FF7003B39D8 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A773A0220568FF7003B39D8 /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		5A675F1120528712003F454F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A675F1420528712003F454F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A675F1620528712003F454F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A675F1C20528B7E003F454F /* CustomUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIButton.swift; sourceTree = "<group>"; };
+		5A675F1E20528EDD003F454F /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
+		5A7739F92052984E003B39D8 /* CustomUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUILabel.swift; sourceTree = "<group>"; };
+		5A7739FC2052BAEF003B39D8 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		5A7739FE2052C05C003B39D8 /* SavedContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedContactViewController.swift; sourceTree = "<group>"; };
+		5A773A0020567A87003B39D8 /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
+		5A773A0220568FF7003B39D8 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +71,26 @@
 				5A675F0A20528712003F454F /* AppDelegate.swift */,
 				5A675F0C20528712003F454F /* ViewController.swift */,
 				5A675F0E20528712003F454F /* Main.storyboard */,
+				5A773A0220568FF7003B39D8 /* CustomTableViewCell.swift */,
+				5A773A0020567A87003B39D8 /* CustomTableViewController.swift */,
+				5A7739FE2052C05C003B39D8 /* SavedContactViewController.swift */,
+				5A7739FB2052A227003B39D8 /* Custom UI Elements */,
+				5A675F1E20528EDD003F454F /* ContactListViewController.swift */,
+				5A7739FC2052BAEF003B39D8 /* Singleton.swift */,
 				5A675F1120528712003F454F /* Assets.xcassets */,
 				5A675F1320528712003F454F /* LaunchScreen.storyboard */,
 				5A675F1620528712003F454F /* Info.plist */,
 			);
 			path = ContactListApp;
+			sourceTree = "<group>";
+		};
+		5A7739FB2052A227003B39D8 /* Custom UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				5A7739F92052984E003B39D8 /* CustomUILabel.swift */,
+				5A675F1C20528B7E003F454F /* CustomUIButton.swift */,
+			);
+			path = "Custom UI Elements";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +165,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A773A0320568FF7003B39D8 /* CustomTableViewCell.swift in Sources */,
 				5A675F0D20528712003F454F /* ViewController.swift in Sources */,
+				5A7739FF2052C05C003B39D8 /* SavedContactViewController.swift in Sources */,
+				5A7739FD2052BAEF003B39D8 /* Singleton.swift in Sources */,
+				5A675F1F20528EDD003F454F /* ContactListViewController.swift in Sources */,
+				5A773A0120567A87003B39D8 /* CustomTableViewController.swift in Sources */,
+				5A7739FA2052984E003B39D8 /* CustomUILabel.swift in Sources */,
 				5A675F0B20528712003F454F /* AppDelegate.swift in Sources */,
+				5A675F1D20528B7E003F454F /* CustomUIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
