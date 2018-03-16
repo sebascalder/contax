@@ -268,9 +268,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBQ-ld-c2z" customClass="CustomUILabel" customModule="ContactListApp" customModuleProvider="target">
-                                <rect key="frame" x="95" y="370" width="184" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBQ-ld-c2z" customClass="CustomUILabel" customModule="ContactListApp" customModuleProvider="target">
+                                <rect key="frame" x="95" y="506" width="184" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="cJA-Vp-59T"/>
+                                    <constraint firstAttribute="height" constant="21" id="qD6-iF-TjN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -297,6 +300,7 @@
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="addContactButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="00T-YB-jv6"/>
+                                    <action selector="saveActionButton:" destination="cOO-ni-jQ3" eventType="touchUpInside" id="oaU-51-0aR"/>
                                     <segue destination="2wX-ov-Tv7" kind="show" id="AMU-Gq-yl0"/>
                                 </connections>
                             </button>
@@ -304,10 +308,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="i2T-Bw-bC1" firstAttribute="centerX" secondItem="DjX-HF-Qxq" secondAttribute="centerX" id="GzQ-Gw-0iU"/>
+                            <constraint firstItem="PBQ-ld-c2z" firstAttribute="top" secondItem="pJ6-UO-Xcf" secondAttribute="bottom" constant="15" id="a4g-9T-a0n"/>
                             <constraint firstItem="pJ6-UO-Xcf" firstAttribute="width" secondItem="LUf-QU-HRz" secondAttribute="width" id="afh-Nk-hRW"/>
                             <constraint firstItem="DjX-HF-Qxq" firstAttribute="bottom" secondItem="i2T-Bw-bC1" secondAttribute="bottom" constant="30" id="kaV-QR-ALH"/>
                             <constraint firstItem="pJ6-UO-Xcf" firstAttribute="top" secondItem="DjX-HF-Qxq" secondAttribute="top" id="mqz-FS-joQ"/>
                             <constraint firstItem="pJ6-UO-Xcf" firstAttribute="centerX" secondItem="DjX-HF-Qxq" secondAttribute="centerX" id="rM2-Wm-X3h"/>
+                            <constraint firstItem="PBQ-ld-c2z" firstAttribute="centerX" secondItem="DjX-HF-Qxq" secondAttribute="centerX" id="tx0-Vh-Ncm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DjX-HF-Qxq"/>
                     </view>
@@ -316,6 +322,7 @@
                         <outlet property="emailLabel" destination="3iD-dT-vNw" id="AGY-Gz-OKG"/>
                         <outlet property="nameLabel" destination="gdA-aI-IPl" id="PaK-PE-1CX"/>
                         <outlet property="phoneLabel" destination="PBQ-ld-c2z" id="pME-LF-btG"/>
+                        <outlet property="saveButton" destination="i2T-Bw-bC1" id="Dwe-Qg-7zh"/>
                         <outlet property="surnameLabel" destination="GUk-xG-5RF" id="yy4-NJ-Jlq"/>
                     </connections>
                 </viewController>

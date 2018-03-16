@@ -15,17 +15,27 @@ class SavedContactViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var contactPhoto: UIImageView!
     
+    @IBOutlet weak var saveButton: CustomUIButton!
+    @IBAction func saveActionButton(_ sender: Any) {
+        
+        // MARK: CORE DATA. Needs to be implemented.
+        //Pass singleton values to core data
+        print("Saving procedure")
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Show confirmation text
         nameLabel.text = Singleton.shared.name
-        surnameLabel.text = Singleton.shared.surname
         phoneLabel.text = Singleton.shared.phoneNumber
-        emailLabel.text = Singleton.shared.email
         contactPhoto.image = Singleton.shared.contactImage
         view.backgroundColor = UIColor(red: 239/255, green: 239/255, blue: 244/255, alpha: 1)
         contactPhoto.clipsToBounds = true
-        self.title = Singleton.shared.name
+        self.title = Singleton.shared.name //View Title with name
+        
+        
         
         // Do any additional setup after loading the view.
     }

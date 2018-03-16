@@ -15,7 +15,7 @@ class ContactListViewController: UIViewController, UITextFieldDelegate, UIImageP
 
     
     
-    // MARK: Text Field Declarations
+    // MARK: Text Field & Image Declarations
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var addOutletButton: CustomUIButton!
@@ -23,30 +23,32 @@ class ContactListViewController: UIViewController, UITextFieldDelegate, UIImageP
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Delegates
         nameTextField.delegate = self
         phoneNumberTextField.delegate = self
         imagePicker.delegate = self
+        
+        // Custom Appearance
         profileImage.clipsToBounds = true
         profileImage.layer.cornerRadius = 45
+        view.backgroundColor = UIColor(red: 239/255, green: 239/255, blue: 244/255, alpha: 1)
+
         
         //Dismiss keyboard on tap
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
-        // Do any additional setup after loading the view.
-        view.backgroundColor = UIColor(red: 239/255, green: 239/255, blue: 244/255, alpha: 1)
     }
     
-    // MARK: Buttons
+    // MARK: Add Profile Picture Button
     @IBAction func addPhotoButton(_ sender: Any) {
+        // MARK: - Alert Definition
         let optionMenu = UIAlertController(title: "Choose Source", message: "", preferredStyle: .actionSheet)
-        
         let takePhotoAction = UIAlertAction(title: "Take Photo", style: .default, handler:
         {
-            
+            // MARK: - Take Photo Action
             (alert: UIAlertAction!) -> Void in
-            
-            
             self.imagePicker.sourceType = UIImagePickerControllerSourceType.camera
             self.present(self.imagePicker, animated: true, completion: nil)
             
@@ -54,6 +56,7 @@ class ContactListViewController: UIViewController, UITextFieldDelegate, UIImageP
         
         let choosePhotoAction = UIAlertAction(title: "Choose Photo", style: .default, handler:
         {
+            // MARK: - Choose Photo Action
             (alert: UIAlertAction!) -> Void in
             self.imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
             self.present(self.imagePicker, animated: true, completion: nil)
@@ -108,7 +111,7 @@ class ContactListViewController: UIViewController, UITextFieldDelegate, UIImageP
         )
         
         // MARK: Alert
-           if nameTextField.text == nil || phoneNumberTextField.text == nil {
+           if nameTextField.text == "" || phoneNumberTextField.text == "" {
             myAlertController.addAction(cancelAction)
             self.present(myAlertController, animated: true, completion: nil)
             print("Required fields missing")
@@ -122,7 +125,7 @@ class ContactListViewController: UIViewController, UITextFieldDelegate, UIImageP
             
             //Move to Saved View Controller
             performSegue(withIdentifier: "segueID01", sender: self)
-            print("Contact saved")
+            print("Contact saved in singleton")
         }
     }
 

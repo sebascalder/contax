@@ -17,6 +17,8 @@ class Singleton{
             print("Name changed")
         }
     }
+    
+    var nextAvailableContactIDSuffix = 1
     var surname = ""
     var phoneNumber = ""
     var email = ""

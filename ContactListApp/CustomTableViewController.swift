@@ -9,14 +9,8 @@
 import UIKit
 
 class CustomTableViewController: UITableViewController {
-
-    var contacts: [(name: String, phone: String)] = [
-        (name: "Sebastian", phone: "998-845-8772"),
-        (name: "Sarah", phone: "998-845-2972"),
-        (name: "Fabrizio", phone: "998-845-2972"),
-        (name: "Lorenzo", phone: "998-845-2972")
-    ]
     
+    // MARK: - Data Source. Must be replaced with CoreData.
     // contactsABC is an array of arrays. Each second level array is a section.
     var contactsABC: [[(name: String, phone: String)]] = [
         [ //array 0
@@ -55,7 +49,7 @@ class CustomTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
+    // MARK: - Table View Configuration
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -69,8 +63,11 @@ class CustomTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        // MARK: - Use of Custom Cells
             let cell = tableView.dequeueReusableCell(withIdentifier: "customContactIdentifier", for: indexPath)
-            let customCell = cell as? CustomTableViewCell
+            let customCell = cell as? CustomTableViewCell //Declaration of custom cell as usable cell
+        
+        // MARK: - Link Cell Data with Data Source
             customCell?.nameLabel.text = contactsABC[indexPath.section][indexPath.row].name
             customCell?.phoneLabel.text = contactsABC[indexPath.section][indexPath.row].phone
             customCell?.profileImage.image = UIImage(named: "profile_1")
@@ -78,6 +75,7 @@ class CustomTableViewController: UITableViewController {
             return cell
     }
 
+    // MARK: - Set Titles for Headers
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
